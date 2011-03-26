@@ -6,53 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>399</width>
-    <height>107</height>
+    <width>427</width>
+    <height>113</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Typing Speed</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QTimeEdit" name="timeEdit">
-    <property name="geometry">
-     <rect>
-      <x>305</x>
-      <y>58</y>
-      <width>81</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Andalus</family>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="wrapping">
-     <bool>false</bool>
-    </property>
-    <property name="frame">
-     <bool>true</bool>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-    <property name="buttonSymbols">
-     <enum>QAbstractSpinBox::NoButtons</enum>
-    </property>
-    <property name="keyboardTracking">
-     <bool>true</bool>
-    </property>
-   </widget>
    <widget class="QPushButton" name="btn">
     <property name="geometry">
      <rect>
-      <x>5</x>
-      <y>58</y>
+      <x>10</x>
+      <y>60</y>
       <width>91</width>
       <height>41</height>
      </rect>
@@ -74,10 +40,10 @@
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="speed">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>190</x>
       <y>60</y>
       <width>121</width>
       <height>41</height>
@@ -86,12 +52,12 @@
     <property name="font">
      <font>
       <pointsize>14</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="text">
-     <string>0 с/м</string>
+     <string>0 s/m</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -102,17 +68,67 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>381</width>
+      <width>411</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>BrushType</family>
+      <family>Comic Sans MS</family>
       <pointsize>16</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="time">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>60</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Andalus</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>0 : 00 : 00</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_2">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>60</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Reset</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
     </property>
    </widget>
   </widget>
