@@ -43,7 +43,7 @@ private slots:
     void on_lineEdit_textChanged(QString );
     void on_btn_clicked(bool checked);
     void count();
-     void display();
+    void display();
 };
 
 #endif // MAINWINDOW_H

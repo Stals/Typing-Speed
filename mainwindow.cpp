@@ -2,8 +2,8 @@
 #include "ui_mainwindow.h"
 #include <QTimer>
 MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
+	QMainWindow(parent),
+	ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     ui->lineEdit->setFocus();
@@ -23,25 +23,25 @@ void MainWindow::display(){
 
 
 
-if(seconds<10){
-    Qseconds="0"+QString::number(seconds);
-}else{
+    if(seconds<10){
+	Qseconds="0"+QString::number(seconds);
+    }else{
 
-    Qseconds=QString::number(seconds);
-}
+	Qseconds=QString::number(seconds);
+    }
 
-if(minutes<10){
-    Qminutes="0"+QString::number(minutes);
-}else{
+    if(minutes<10){
+	Qminutes="0"+QString::number(minutes);
+    }else{
 
-    Qminutes=QString::number(minutes);
-}
-Qhours=QString::number(hours);
+	Qminutes=QString::number(minutes);
+    }
+    Qhours=QString::number(hours);
 
-ui->time->setText(Qhours+" : "+Qminutes+" : "+Qseconds);
+    ui->time->setText(Qhours+" : "+Qminutes+" : "+Qseconds);
 
-speed=((double)ui->lineEdit->text().length()/(double)allSeconds)*60;
-ui->speed->setText(QString::number((int)speed)+" s/m");
+    speed=((double)ui->lineEdit->text().length()/(double)allSeconds)*60;
+    ui->speed->setText(QString::number((int)speed)+" s/m");
 
 }
 
@@ -54,30 +54,30 @@ void MainWindow::stopTimer(){
     displayTimer->stop();
 }
 void MainWindow::resetTimer(){
-stopTimer();
-ui->speed->setText("0 s/m");
-allSeconds=1;
-seconds=0; minutes=0;hours=0;
-ui->time->setText("0 : 00 : 00");
-ui->btn->setText("START");
-ui->lineEdit->clear();
-ui->lineEdit->setFocus();
+    stopTimer();
+    ui->speed->setText("0 s/m");
+    allSeconds=1;
+    seconds=0; minutes=0;hours=0;
+    ui->time->setText("0 : 00 : 00");
+    ui->btn->setText("START");
+    ui->lineEdit->clear();
+    ui->lineEdit->setFocus();
 
 }
 void MainWindow::count(){
-++allSeconds;
-++seconds;
-if(seconds==60){
-    ++minutes;
-    seconds=0;
-}
-if(minutes==60){
-    ++hours;
-    minutes=0;
-}
-if(hours==100){
-    hours=0;
-}
+    ++allSeconds;
+    ++seconds;
+    if(seconds==60){
+	++minutes;
+	seconds=0;
+    }
+    if(minutes==60){
+	++hours;
+	minutes=0;
+    }
+    if(hours==100){
+	hours=0;
+    }
 
 }
 void MainWindow::on_btn_clicked(bool checked)
@@ -87,13 +87,13 @@ void MainWindow::on_btn_clicked(bool checked)
     case true:
         startTimer();
 
-       ui->btn->setText("STOP");
+	ui->btn->setText("STOP");
         break;
 
     case false:
 
-         stopTimer();
-         ui->btn->setText("START");
+	stopTimer();
+	ui->btn->setText("START");
         break;
 
     }
